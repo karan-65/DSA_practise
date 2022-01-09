@@ -6,8 +6,9 @@ public class permutation {
             System.out.println(p);
             return;
         }
-        char ch=up.charAt(0);
+
         for(int i=0;i<=p.length();i++){
+            char ch=up.charAt(0);
             String s=p.substring(0,i);
             String q=p.substring(i,p.length());
             fun(s+ch+q,up.substring(1));
