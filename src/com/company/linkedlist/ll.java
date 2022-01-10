@@ -47,6 +47,43 @@ public class ll {
             temp=temp.next;
         }
     }
+//for deleting the first element
+    public void deletefirst(){
+        int val =head.value;
+        head=head.next;
+        if(head==null){
+            tail=null;
+        }
+        size--;
+    }
+//for deleting a element at last
+    public void deleteLast(){
+
+        Node temp=head;
+        for(int i=0;i<size-1;i++){
+            temp=temp.next;
+        }
+        tail=temp;
+        temp.next=null;
+    }
+//for deleting element at any index
+    public void deleteIdx(int idx){
+        if(idx==0){
+             deletefirst();
+        }
+        if(idx==size-1){
+            deleteLast();
+        }
+
+        Node temp=head;
+        for(int i=0;i<idx-1;i++){
+            temp=temp.next;
+        }
+        temp.next=temp.next.next;
+
+        size--;
+    }
+
 
     private class Node{
         private int value;
@@ -68,6 +105,9 @@ public class ll {
         linkedlist.insertAtfirst(5);
         linkedlist.insertLast(6);
         linkedlist.insertany(7,2);
+        linkedlist.deleteLast();
+        linkedlist.display();
+        linkedlist.deleteIdx(2);
         linkedlist.display();
 
 
