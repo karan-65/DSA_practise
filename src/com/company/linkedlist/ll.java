@@ -9,7 +9,7 @@ public class ll {
         this.size=0;
     }
     //for inserting at first
-    public void insertAtfirst(int val){
+    public void insertAtFirst(int val){
         Node node= new Node(val);
          if(tail==null){
             tail=node;
@@ -100,9 +100,9 @@ public class ll {
     }
     public static void main(String[] args) {
         ll linkedlist=new ll();
-        linkedlist.insertAtfirst(3);
-        linkedlist.insertAtfirst(4);
-        linkedlist.insertAtfirst(5);
+        linkedlist.insertAtFirst(3);
+        linkedlist.insertAtFirst(4);
+        linkedlist.insertAtFirst(5);
         linkedlist.insertLast(6);
         linkedlist.insertany(7,2);
         linkedlist.deleteLast();
