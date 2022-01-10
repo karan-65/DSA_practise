@@ -48,7 +48,7 @@ public class ll {
         }
     }
 //for deleting the first element
-    public void deletefirst(){
+    public void deleteFirst(){
         int val =head.value;
         head=head.next;
         if(head==null){
@@ -69,7 +69,7 @@ public class ll {
 //for deleting element at any index
     public void deleteIdx(int idx){
         if(idx==0){
-             deletefirst();
+             deleteFirst();
         }
         if(idx==size-1){
             deleteLast();
