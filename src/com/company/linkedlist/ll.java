@@ -90,6 +90,7 @@ public class ll {
         private Node next;
 
         public Node(int value){
+
             this.value=value;
         }
 
