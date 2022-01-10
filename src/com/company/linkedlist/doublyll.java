@@ -1,4 +1,5 @@
 package com.company.linkedlist;
+//impelementing doubly linkedlist
 
 public class doublyll {
    private Node head;
@@ -12,6 +13,28 @@ public class doublyll {
         node.next=head;
         node.prev=null;
         head=node;
+    }
+    //inserting at last in doublylinkedlist
+    public void insertLast(int val){
+        Node node =new Node(val);
+        Node temp=head;
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        temp.next=node;
+        node.prev=temp;
+        node.next=null;
+    }
+    public void insertidx(int val,int idx){
+        Node node=new Node(val);
+        Node temp=head;
+        for(int i=0;i<idx-1;i++){
+            temp=temp.next;
+        }
+        node.next=temp.next;
+        temp.next=node;
+        node.prev=temp;
+        node.next.prev=node;
     }
     //displaying in linkedlist
     public void display(){
@@ -53,6 +76,8 @@ public class doublyll {
         ll.insertfirst(4);
         ll.insertfirst(5);
         ll.insertfirst(46);
+        ll.insertLast(2);
+        ll.insertidx(6,2);
         ll.display();
 
 
