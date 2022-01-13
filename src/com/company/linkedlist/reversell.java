@@ -46,6 +46,20 @@ public class reversell {
         head=prev;
     }
 
+    //reverse a linked list recursively
+    public Node recursivereverse(Node head){
+        if(head==null||head.next==null){
+            return head;
+        }
+
+        Node newhead=recursivereverse(head.next);
+        head.next.next=head;
+        head.next=null;
+
+        return newhead;
+    }
+
+
 
     private class Node{
         private int value;
@@ -70,7 +84,7 @@ public class reversell {
         ll.insertAtFirst(3);
         ll.insertAtFirst(4);
 
-        ll.reversell();
+        ll.head=ll.recursivereverse(ll.head);
         ll.display();
 
 
