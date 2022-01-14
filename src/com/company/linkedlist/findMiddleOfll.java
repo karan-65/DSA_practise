@@ -6,7 +6,7 @@ public class findMiddleOfll {
     public Node middle(Node head){
         Node fast=head;
         Node slow =head;
-        while(fast!=null||fast.next!=null){
+        while(fast!=null&&fast.next!=null){
             //first slow will move one step
             slow=slow.next;
             //fast will move two steps
