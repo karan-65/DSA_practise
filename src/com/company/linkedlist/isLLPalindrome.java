@@ -32,8 +32,7 @@ public class isLLPalindrome {
 
         public Node reversell(Node head){
             Node temp=null;
-            Node tmp=head;
-            while(tmp!=null){
+            while(head!=null){
                 Node next=head.next;
                 head.next=temp;
                 temp=head;
