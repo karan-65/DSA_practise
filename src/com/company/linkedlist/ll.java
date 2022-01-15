@@ -47,6 +47,7 @@ public class ll {
             temp=temp.next;
         }
     }
+
 //for deleting the first element
     public void deleteFirst(){
         int val =head.value;
