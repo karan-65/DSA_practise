@@ -1,9 +1,13 @@
 package com.company.linkedlist;
+//approach
+//using pointer l1 and l2 storing their sum in sum
 
 public class addTwoNumbersGivenAsLinkedList {
     public Node fun(Node l1,Node l2){
+        //dummy node that will point to first node
         Node dummy=new Node();
         Node temp=dummy;
+        //int carry for adding carry
         int carry=0;
         while(l1!=null||l2!=null||carry==1){
             int sum=0;
@@ -17,6 +21,7 @@ public class addTwoNumbersGivenAsLinkedList {
             }
             sum+=carry;
             carry=sum/10;
+            //adding the whole sum to new node sum%10 that will return the number
             Node node=new Node(sum%10);
             temp.next=node;
             temp=temp.next;
