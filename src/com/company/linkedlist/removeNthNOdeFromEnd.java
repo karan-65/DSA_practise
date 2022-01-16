@@ -8,11 +8,11 @@ public class removeNthNOdeFromEnd {
         start.next=head;
         Node fast=start;
         Node slow=start;
-        for(int i=1;i<n;++i){
+        for(int i=1;i<=n;++i){
             //fast will go till n
             fast=fast.next;
         }
-        while(fast!=null){
+        while(fast.next!=null){
             //after fast will reach n fast and slow will start moving until fast reaches null.
             fast=fast.next;
             slow=slow.next;

@@ -19,6 +19,7 @@ public class ll {
         head=node;
         size++;
     }
+
     //for inserting a element at last
     public void insertLast(int val){
         Node node=new Node(val);
@@ -89,6 +90,9 @@ public class ll {
     private class Node{
         private int value;
         private Node next;
+        public Node(){
+
+        }
 
         public Node(int value){
 
@@ -106,10 +110,7 @@ public class ll {
         linkedlist.insertAtFirst(4);
         linkedlist.insertAtFirst(5);
         linkedlist.insertLast(6);
-        linkedlist.insertany(7,2);
-        linkedlist.deleteLast();
-        linkedlist.display();
-        linkedlist.deleteIdx(2);
+
         linkedlist.display();
 
 
