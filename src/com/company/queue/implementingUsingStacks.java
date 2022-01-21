@@ -11,7 +11,7 @@ public class implementingUsingStacks {
         public boolean isEmpty(){
             return s1.isEmpty();
         }
-
+//adding elemenets
         public void push(int data){
             while(!s1.isEmpty()){
                 s2.push(s1.pop());
@@ -21,7 +21,7 @@ public class implementingUsingStacks {
                 s1.push(s2.pop());
             }
         }
-
+//removing elements
         public int remove(){
             if(isEmpty()){
                 System.out.println("empty");
