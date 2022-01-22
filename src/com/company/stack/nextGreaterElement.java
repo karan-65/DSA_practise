@@ -1,23 +1,22 @@
-package com.company.queue;
-
+package com.company.stack;
 import java.util.Stack;
 
-public class nextGreaterElementLeft {
+public class nextGreaterElement {
     public static int[] fun(int[] a){
         int n=a.length;
         int[]arr=new int[n];
         Stack<Integer> s=new Stack<>();
-        //loop will run from front
-        for(int i=0;i<=n-1;i++){
+        //loop will run from back
+        for(int i=n-1;i>=0;i--){
             while(!s.isEmpty() &&s.peek()<=a[i]){
                 s.pop();
             }
-            if (!s.isEmpty()){
-                arr[i] = s.peek();
-            }
-            else {
-                arr[i] = -1;
-            }
+                if (!s.isEmpty()){
+                    arr[i] = s.peek();
+                }
+                else {
+                    arr[i] = -1;
+                }
 
             s.push(a[i]);
         }
