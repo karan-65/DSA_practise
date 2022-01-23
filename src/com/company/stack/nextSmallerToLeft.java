@@ -8,6 +8,7 @@ public class nextSmallerToLeft {
         int[]arr=new int[n];
         Stack<Integer> s=new Stack<>();
         //loop will run from front
+
         for(int i=0;i<=n-1;i++){
             while(!s.isEmpty() &&s.peek()>=a[i]){
                 s.pop();
@@ -18,7 +19,6 @@ public class nextSmallerToLeft {
             else {
                 arr[i] = -1;
             }
-
             s.push(a[i]);
         }
         return arr;
