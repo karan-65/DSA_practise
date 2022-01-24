@@ -25,7 +25,7 @@ public class stockSpan {
         return a;
     }
     public static void main(String[] args) {
-        int[] arr1 ={100,80,60,70,60,75,85};
+        int[] arr1 ={1,7,8,2};
         int[] arr2 =stock(arr1);
 
             Arrays.stream(arr2).forEach(System.out::println);
