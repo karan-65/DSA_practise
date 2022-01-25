@@ -1,8 +1,6 @@
 package com.company.stack;
-
-
 import java.util.Stack;
-
+//it uses the approach of max area of histogram
 public class maxAreaRectangleBinaryMatrix {
     public static int fn(int[]arr){
         //nearest smaller to left
@@ -56,7 +54,7 @@ public class maxAreaRectangleBinaryMatrix {
 
 
     }
-
+//function for calculating max area in rectangle
     public static int fun2(int [][]arr3){
         //storing first row
         int[] curRow =arr3[0];
