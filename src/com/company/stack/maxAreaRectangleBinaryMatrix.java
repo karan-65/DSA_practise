@@ -1,8 +1,9 @@
 package com.company.stack;
-import java.util.Stack;
-//using approach of nsl and nsr and getting their index
 
-public class maximumAreaHistogram {
+
+import java.util.Stack;
+
+public class maxAreaRectangleBinaryMatrix {
     public static int fn(int[]arr){
         //nearest smaller to left
         int[] a =new int[arr.length];
@@ -55,12 +56,37 @@ public class maximumAreaHistogram {
 
 
     }
+
+    public static int fun2(int [][]arr3){
+        //storing first row
+        int[] curRow =arr3[0];
+        //calculating its max area
+        int max=fn(curRow);
+        //calculating for next rows
+        for(int i=1;i<arr3.length;i++){
+            for(int j=0;j<arr3[0].length;j++){
+                if(arr3[i][j]==0){
+                    curRow[j]=0;
+                }
+                else{
+                    curRow[j]+=1;
+                }
+            }
+            int curAns=fn(curRow);
+            max=Math.max(max,curAns);
+        }
+        return max;
+
+
+    }
+
     public static void main(String[] args) {
-        int[] hist = { 0,1,1,1,1,0};
-        System.out.println("Maximum area is " + fn(hist));
-
-
-
+        int[][] A = { {0, 1, 1,1,1, 0},
+                {1, 1, 1 ,1,0,1},
+                {1, 1,0,1, 1, 1},
+                {1, 1,1,1,1, 0},
+        };
+        System.out.print("Area of maximum rectangle is " +
+                fun2(A));
     }
-    }
-
+}
