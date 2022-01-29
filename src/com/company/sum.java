@@ -4,10 +4,15 @@ import java.util.Scanner;
 
 public class sum {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int a=sc.nextInt();
-        int b=sc.nextInt();
-        int sum=a%b;
-        System.out.println(sum);
+        int nums[]={1,2,1};
+
+        int arr[]=new int[nums.length*2];
+        for(int i=0;i<nums.length;i++){
+            arr[i]=nums[i];
+            arr[nums.length+i]=nums[i];
     }
+       for(int i=0;i<arr.length;i++){
+           System.out.println(arr[i]);
+       }
+}
 }
