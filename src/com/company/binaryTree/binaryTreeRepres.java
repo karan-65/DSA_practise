@@ -5,6 +5,8 @@ public class binaryTreeRepres {
     binaryTreeRepres() {
         root = null;
     }
+
+    //preorder traversal using recursion
     public void preorder(Node node){
 
         if(node==null){
@@ -14,6 +16,8 @@ public class binaryTreeRepres {
         preorder(node.left);
         preorder(node.right);
     }
+
+
     public static class Node{
         int data;
         Node left;
