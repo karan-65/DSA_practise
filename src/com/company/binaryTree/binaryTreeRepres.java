@@ -28,6 +28,16 @@ public class binaryTreeRepres {
 
     }
 
+    //post order traversal
+    public void postOrder(Node node){
+        if(node==null){
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.data);
+    }
+
 
     public static class Node{
         int data;
@@ -52,6 +62,7 @@ public class binaryTreeRepres {
         t.root.left.right = new Node(6);
         t.preorder(t.root);
         t.inOrder(t.root);
+        t.postOrder(t.root);
 
 
 
