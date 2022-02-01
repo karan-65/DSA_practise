@@ -17,6 +17,17 @@ public class binaryTreeRepres {
         preorder(node.right);
     }
 
+    //inorder traversal using recursion
+    public void inOrder(Node node){
+        if(node==null){
+            return;
+        }
+        inOrder(node.left);
+        System.out.println(node.data);
+        inOrder(node.right);
+
+    }
+
 
     public static class Node{
         int data;
@@ -40,6 +51,7 @@ public class binaryTreeRepres {
         t.root.left.left = new Node(5);
         t.root.left.right = new Node(6);
         t.preorder(t.root);
+        t.inOrder(t.root);
 
 
 
