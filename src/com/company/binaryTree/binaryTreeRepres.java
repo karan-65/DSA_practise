@@ -1,5 +1,8 @@
 package com.company.binaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class binaryTreeRepres {
     Node root;
     binaryTreeRepres() {
@@ -28,7 +31,7 @@ public class binaryTreeRepres {
 
     }
 
-    //post order traversal
+    //post order traversal using recursion
     public void postOrder(Node node){
         if(node==null){
             return;
@@ -37,6 +40,24 @@ public class binaryTreeRepres {
         postOrder(node.right);
         System.out.println(node.data);
     }
+
+    //level order traversal
+    public void leveOrder(Node node){
+        //using queue data structure
+        Queue<Node>q=new LinkedList<>();
+        q.add(node);
+        while(!q.isEmpty()){
+            Node curr=q.poll();
+            System.out.println(curr.data);
+            if(curr.left!=null){
+                q.add(curr.left);
+            }
+            if(curr.right!=null){
+                q.add(curr.right);
+            }
+        }
+    }
+
 
 
     public static class Node{
@@ -63,6 +84,7 @@ public class binaryTreeRepres {
         t.preorder(t.root);
         t.inOrder(t.root);
         t.postOrder(t.root);
+        t.leveOrder(t.root);
 
 
 
