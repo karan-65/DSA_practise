@@ -1,7 +1,6 @@
 package com.company.binaryTree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class binaryTreeRepres {
     Node root;
@@ -19,6 +18,25 @@ public class binaryTreeRepres {
         preorder(node.left);
         preorder(node.right);
     }
+    //preorder traversal using iteration
+    public void preOrder2(Node node){
+        if(node==null){
+            return;
+        }
+        Stack<Node>s=new Stack<>();
+        s.push(node);
+        while(!s.isEmpty()){
+            node=s.pop();
+            System.out.println(node.data);
+            if(node.right!=null){
+                s.push(node.right);
+            }
+            if(node.left!=null){
+                s.push(node.left);
+            }
+        }
+    }
+
 
     //inorder traversal using recursion
     public void inOrder(Node node){
@@ -44,18 +62,22 @@ public class binaryTreeRepres {
     //level order traversal
     public void leveOrder(Node node){
         //using queue data structure
+        ArrayList<List<Integer>>list=new ArrayList<>();
         Queue<Node>q=new LinkedList<>();
         q.add(node);
         while(!q.isEmpty()){
+            ArrayList<Integer>temp = new ArrayList<>();
             Node curr=q.poll();
-            System.out.println(curr.data);
+            temp.add(curr.data);
             if(curr.left!=null){
                 q.add(curr.left);
             }
             if(curr.right!=null){
                 q.add(curr.right);
             }
+            list.add(temp);
         }
+        System.out.println(list);
     }
 
 
@@ -81,10 +103,11 @@ public class binaryTreeRepres {
         t.root.right=new Node(3);
         t.root.left.left = new Node(5);
         t.root.left.right = new Node(6);
-        t.preorder(t.root);
-        t.inOrder(t.root);
-        t.postOrder(t.root);
-        t.leveOrder(t.root);
+//        t.preorder(t.root);
+//        t.inOrder(t.root);
+//        t.postOrder(t.root);
+//        t.leveOrder(t.root);
+        t.preOrder2(t.root);
 
 
 
