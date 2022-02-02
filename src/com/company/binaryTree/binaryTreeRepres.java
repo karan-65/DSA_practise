@@ -46,7 +46,22 @@ public class binaryTreeRepres {
         inOrder(node.left);
         System.out.println(node.data);
         inOrder(node.right);
-
+    }
+    //inorder traversal using iteration
+    public void inOrder2(Node node){
+        Stack<Node>s=new Stack<>();
+        Node curr=node;
+        while(!s.isEmpty()||curr!=null){
+            if(curr!=null){
+                s.push(curr);
+                curr=curr.left;
+            }
+            else{
+                curr=s.pop();
+                System.out.println(curr.data);
+                curr=curr.right;
+            }
+        }
     }
 
     //post order traversal using recursion
@@ -107,7 +122,8 @@ public class binaryTreeRepres {
 //        t.inOrder(t.root);
 //        t.postOrder(t.root);
 //        t.leveOrder(t.root);
-        t.preOrder2(t.root);
+//        t.preOrder2(t.root);
+        t.inOrder2(t.root);
 
 
 
