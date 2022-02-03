@@ -73,6 +73,33 @@ public class binaryTreeRepres {
         postOrder(node.right);
         System.out.println(node.data);
     }
+    //post order using iteration
+    public void postOrder2(Node node){
+        Stack<Node>s=new Stack<>();
+        Node curr=node;
+        while(!s.isEmpty()||curr!=null){
+            if(curr!=null){
+                s.push(curr);
+                curr=curr.left;
+            }
+            else{
+               Node temp=s.peek().right;
+               if(temp==null){
+                   temp=s.peek();
+                   s.pop();
+                   System.out.println(temp.data);
+                   while(!s.isEmpty()&&temp==s.peek().right) {
+                       temp = s.peek();
+                       s.pop();
+                       System.out.println(temp.data);
+                   }
+               }
+               else {
+                   curr=temp;
+               }
+            }
+        }
+    }
 
     //level order traversal
     public void leveOrder(Node node){
@@ -123,7 +150,8 @@ public class binaryTreeRepres {
 //        t.postOrder(t.root);
 //        t.leveOrder(t.root);
 //        t.preOrder2(t.root);
-        t.inOrder2(t.root);
+//        t.inOrder2(t.root);
+        t.postOrder2(t.root);
 
 
 
