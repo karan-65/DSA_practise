@@ -11,6 +11,7 @@ public  class heightOfBinaryTree {
         }
         return Math.max(height(node.left),height(node.right))+1;
     }
+    //calculating height using recursion
     public static class Node{
         int data;
         Node left;
