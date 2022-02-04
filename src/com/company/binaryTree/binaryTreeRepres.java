@@ -5,6 +5,7 @@ import java.util.*;
 public class binaryTreeRepres {
     Node root;
     binaryTreeRepres() {
+
         root = null;
     }
 
