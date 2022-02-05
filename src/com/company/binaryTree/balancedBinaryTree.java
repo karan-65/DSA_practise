@@ -1,5 +1,7 @@
 package com.company.binaryTree;
-
+//checking if the tree is balanced or not
+//if it is balanced we will return the height
+//if not balanced we will return -1
 public class balancedBinaryTree {
 
         public static int balancedbinary(Node node){
