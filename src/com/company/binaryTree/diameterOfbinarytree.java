@@ -1,5 +1,5 @@
 package com.company.binaryTree;
-
+//should practise it again
 public class diameterOfbinarytree {
     public static class Node{
         int data;
