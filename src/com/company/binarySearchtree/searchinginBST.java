@@ -1,5 +1,5 @@
 package com.company.binarySearchtree;
-
+//look to change the main class after implementing insert
 public class searchinginBST {
     public static class Node{
         int data;
