@@ -1,5 +1,6 @@
 package com.company.binarySearchtree;
-
+//itertaively inserting in a binary search tree
+//check this again as its main class is not written
 public class insertinginBST {
     public class Node{
         int data;
