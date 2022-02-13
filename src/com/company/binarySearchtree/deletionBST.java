@@ -1,5 +1,10 @@
 package com.company.binarySearchtree;
-
+//deletion basically look for three steps
+//1 if there is 2 children nodes
+//2 if there is 1 children node
+//3 no child node
+//also refer your leetcode solution and dicussion tab there
+//pepcoding reference has been taken
 public class deletionBST {
     public class Node{
         int data;
