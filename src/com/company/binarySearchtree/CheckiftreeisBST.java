@@ -9,6 +9,7 @@ public class CheckiftreeisBST {
             this.data=data;
         }
     }
+    //insertion in bst
     public static Node insert(Node node, int val) {
         if (node == null) {
             return new Node(val);
@@ -35,6 +36,7 @@ public class CheckiftreeisBST {
         return node;
 
     }
+
     public static void isBst(Node node)
     {
         if (isBst(node, Integer.MIN_VALUE, Integer.MAX_VALUE)) {
@@ -44,7 +46,7 @@ public class CheckiftreeisBST {
             System.out.println("The tree is not a BST!");
         }
     }
-
+//recursive function for checking if it is bst
     public static boolean isBst(Node node ,int max,int min){
         if(node==null){
             return true;
