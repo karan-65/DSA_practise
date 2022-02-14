@@ -6,7 +6,7 @@ package com.company.binarySearchtree;
 //also refer your leetcode solution and dicussion tab there
 //pepcoding reference has been taken
 public class deletionBST {
-    public class Node{
+    public static class Node{
         int data;
         Node right=null;
         Node left=null;
