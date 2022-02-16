@@ -1,5 +1,5 @@
 package com.company.binarySearchtree;
-
+//finding lowest common ancestor using recursion
 public class lowestCommonAncestor {
     public class Node{
         int data;
