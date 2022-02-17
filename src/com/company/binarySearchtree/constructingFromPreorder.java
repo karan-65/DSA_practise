@@ -9,6 +9,8 @@ public class constructingFromPreorder {
             this.data=data;
         }
     }
+    //should look at leetcode submission for reference
+
     int i=0;
     public Node bstFromPreorder(int[]arr){
         return fun(arr,Integer.MAX_VALUE);
