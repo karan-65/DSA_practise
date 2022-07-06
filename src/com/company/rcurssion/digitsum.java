@@ -8,6 +8,7 @@ public class digitsum {
         return n%10 + digitsum(n/10);
     }
     public static void main(String[] args) {
+
         System.out.println(digitsum(1342));
     }
 }
