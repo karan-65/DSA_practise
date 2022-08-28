@@ -6,6 +6,7 @@ public class rotatearrayleftbyone {
     public static void rotate(int[]arr,int n){
         //stored the first element here
         int temp=arr[0];
+
         //pushed every element backward
         for(int i=0;i<arr.length-1;i++){
             arr[i]=arr[i+1];
