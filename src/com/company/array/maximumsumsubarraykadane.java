@@ -5,6 +5,7 @@ public class maximumsumsubarraykadane {
     //this is not the best appraoch
     //use kadane algorithm for best appraoch
 
+
     public static int sum(int []arr){
         int max_sum=0;
         for(int i=0;i<arr.length;i++){
