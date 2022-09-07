@@ -16,7 +16,7 @@ public class sortingcode {
         }
     }
     public static void main(String[] args) {
-        int []arr={3,2,5,1,6};
+        int []arr={3,2,5,1,6,4};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
