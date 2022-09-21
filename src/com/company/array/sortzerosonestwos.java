@@ -1,19 +1,44 @@
 package com.company.array;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class sortzerosonestwos {
     public static void sort012(int arr[], int n)
     {
 
+        int count=0;
+        int count1=0;
+        int count2=0;
         for(int i=0;i<arr.length;i++){
-            int min=0;
-            for(int j=i+1;j<arr.length;j++){
-                if(arr[i]>arr[j]){
-                    int temp=arr[i];
-                    arr[i]=arr[j];
-                    arr[j]=temp;
-                }
+            if(arr[i]==0){
+                count++;
+            }
+            if(arr[i]==1){
+                count1++;
+            }
+            if(arr[i]==2){
+                count2++;
+            }
+        }
+
+        int i=0;
+
+        while(i<arr.length){
+            while(count!=0){
+                arr[i]=0;
+                i++;
+                count--;
+            }
+            while(count1!=0){
+                arr[i]=1;
+                i++;
+                count1--;
+            }
+            while(count2!=0){
+                arr[i]=2;
+                i++;
+                count2--;
             }
 
         }
