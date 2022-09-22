@@ -1,7 +1,7 @@
 package com.company.array;
 
 import java.util.Arrays;
-
+//just sort it and you we will get the approach
 public class choclatedistribution {
     public static void fun(int []arr,int m,int n){
         Arrays.sort(arr);
