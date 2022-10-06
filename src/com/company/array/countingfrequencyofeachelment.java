@@ -25,8 +25,8 @@ public class countingfrequencyofeachelment {
 
     }
     public static void main(String[] args) {
-        int[]arr={2,3,4,5,2,2,2,3,3,4,4,5};
-        count(arr,12);
+        int[]arr={2,3,3,5,6,6,6};
+        count(arr,7);
 
     }
 }
