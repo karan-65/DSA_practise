@@ -10,9 +10,9 @@ public class lonelynumber {
             if(arr.get(i-1)+1<arr.get(i)&&arr.get(i)+1<arr.get(i+1)){
                ar.add(arr.get(i));
             }
-            else {
-                return arr.get(i);
-            }
+           if(arr.size()==1){
+               return arr.get(0);
+           }
         }
         return -1;
     }
