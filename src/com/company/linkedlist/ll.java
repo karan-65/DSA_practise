@@ -62,7 +62,7 @@ public class ll {
     public void deleteLast(){
 
         Node temp=head;
-        for(int i=0;i<size-1;i++){
+        for(int i=0;i<size-2;i++){
             temp=temp.next;
         }
         tail=temp;
