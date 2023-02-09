@@ -68,6 +68,7 @@ public class isLLPalindrome {
         Node right=prev;
         Node left=head;
 
+
         while(right!=null){
             if(left.value!=right.value){
                 return false;

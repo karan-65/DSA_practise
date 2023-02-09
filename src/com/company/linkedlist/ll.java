@@ -85,6 +85,19 @@ public class ll {
 
         size--;
     }
+//function for detecting a loop in linkedlist
+    public static boolean fun(Node head){
+        Node slow=head;
+        Node fast=head;
+        while(fast!=null&&fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     private class Node{
@@ -112,6 +125,7 @@ public class ll {
         linkedlist.insertLast(6);
 
         linkedlist.display();
+
 
 
     }
