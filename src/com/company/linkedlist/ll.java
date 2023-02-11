@@ -125,8 +125,54 @@ public class ll {
 
     }
 
+    public static Node mid(Node head){
+        Node slow=head;
+        Node fast=head.next;
+        while(fast!=null&&fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+    }
 
-    private class Node{
+    public static Node merge(Node head1,Node head2){
+        Node n=new Node();
+       Node temp=n;
+       while (head1!=null&&head2!=null){
+           if(head1.value<=head2.value){
+               temp.next=head1;
+               head1=head1.next;
+               temp=temp.next;
+           }
+           else {
+               temp.next=head2;
+               head2=head2.next;
+               temp=temp.next;
+           }
+       }
+
+       return n.next;
+
+    }
+
+
+    //program for merge sort on linked list
+    public static Node mergesort(Node head){
+        if(head==null||head.next==null){
+            return head;
+        }
+        Node mid=mid(head);
+        Node right=mid.next;
+        mid.next=null;
+        Node newleft=mergesort(head);
+        Node newright=mergesort(right);
+
+        return merge(newleft,newright);
+
+    }
+
+
+    private static class Node{
         private int value;
         private Node next;
         public Node(){
