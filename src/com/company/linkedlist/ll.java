@@ -99,6 +99,32 @@ public class ll {
         return false;
     }
 
+    //function for removing a cycle i ll
+    public static void funn(Node head){
+        Node slow=head;
+        Node fast=head;
+        boolean loop=false;
+        while(fast!=null&&fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                loop=true;
+                break;
+            }
+        }
+        if(loop==false){
+            return;
+        }
+        slow=head;
+        Node prev=null;
+        while(slow==fast){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        prev.next=null;
+
+    }
+
 
     private class Node{
         private int value;
