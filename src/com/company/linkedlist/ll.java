@@ -154,6 +154,42 @@ public class ll {
        return n.next;
 
     }
+    //program for making ll zigzag
+    public static void zigzag(Node head){
+        Node slow=head;
+        Node fast=head.next;
+        while(fast!=null&&fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        Node mid=slow;
+
+        Node curr=slow.next;
+        slow.next=null;
+        Node prev=null;
+
+        while(curr!=null){
+            Node next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+
+        Node left=head;
+        Node right=prev;
+        Node lh,rh;
+        while(left!=null&&right!=null){
+            lh=left.next;
+            left.next=right;
+            rh=right.next;
+            right.next=lh;
+
+            left=lh;
+            right=rh;
+        }
+
+
+    }
 
 
     //program for merge sort on linked list
@@ -196,7 +232,9 @@ public class ll {
         linkedlist.insertAtFirst(5);
         linkedlist.insertLast(6);
 
+
         linkedlist.display();
+
 
 
 
