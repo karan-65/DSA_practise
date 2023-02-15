@@ -125,6 +125,8 @@ public class ll {
 
     }
 
+
+
     public static Node mid(Node head){
         Node slow=head;
         Node fast=head.next;
