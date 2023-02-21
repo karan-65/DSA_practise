@@ -9,7 +9,9 @@ public  class heightOfBinaryTree {
         if(node==null){
             return 0;
         }
-        return Math.max(height(node.left),height(node.right))+1;
+        int lef=height(node.left);
+        int rig=height(node.right);
+        return Math.max(lef,rig)+1;
     }
     //calculating height using recursion
     public static class Node{
@@ -26,6 +28,7 @@ public  class heightOfBinaryTree {
         t.root.left=new Node(2);
         t.root.right=new Node(3);
         t.root.left.left = new Node(5);
+        t.root.left.left.left=new Node(4);
         t.root.left.right = new Node(6);
         System.out.println(height(t.root));
 
