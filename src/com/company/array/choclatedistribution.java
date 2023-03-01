@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class choclatedistribution {
     public static void fun(int []arr,int m,int n){
         Arrays.sort(arr);
-
         int ans=Integer.MAX_VALUE;
         for(int i=0;i<n-m;i++){
             int min=arr[i];
