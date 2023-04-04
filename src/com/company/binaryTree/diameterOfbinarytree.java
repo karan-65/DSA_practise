@@ -13,7 +13,6 @@ public class diameterOfbinarytree {
     public static int diameter(Node node){
         height(node);
         return diameter;
-
     }
 
     public static int height(Node node){
