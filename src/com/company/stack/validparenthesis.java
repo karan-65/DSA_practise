@@ -28,7 +28,7 @@ public class validparenthesis {
         }
     }
     public static void main(String[] args) {
-        String s = "()[]{}";
+        String s = "({{{{}}}))";
         System.out.println(fun(s));
     }
 }
